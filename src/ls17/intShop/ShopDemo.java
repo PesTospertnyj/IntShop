@@ -15,7 +15,7 @@ public class ShopDemo {
         collection.offer(new Product("Bag", 15.50, 3.2));
         collection.offer(new Product("Bicycle", 1750.35, 4.9));
 
-        products.setProducts(collection);
+        //products.setProducts(collection);
 
         while (!collection.isEmpty()) {
             System.out.println(((LinkedList<Product>) collection).pop());
