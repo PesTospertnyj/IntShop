@@ -15,14 +15,6 @@ public class User {
         String pass = scanner.nextLine();
         u.setLogin(log);
         u.setPassword(pass);
-
-        Basket basket = new Basket();
-        System.out.println("In Your Basket: " + basket.getChoicedProducts());
-
-       /*
-        System.out.println(u.getLogin());
-        System.out.println(u.getPassword());
-        */
     }
 
     public String getLogin() {

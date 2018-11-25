@@ -1,13 +1,15 @@
 package ls17.intShop;
 
-public class Basket {
-    private String[] choicedProducts;
+import java.util.Collection;
+import java.util.LinkedList;
 
-    public String[] getChoicedProducts() {
-        return choicedProducts;
+public class Basket extends Product{
+    Collection choicedProducts = new LinkedList();
+
+    public void addToBasket(){
     }
 
-    public void setChoicedProducts(String[] choicedProducts) {
-        this.choicedProducts = choicedProducts;
+    public Basket(String name, double price, double rating) {
+        super(name, price, rating);
     }
 }
