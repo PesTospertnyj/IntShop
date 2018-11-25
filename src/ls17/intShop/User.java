@@ -1,20 +1,18 @@
 package ls17.intShop;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class User {
     private String login;
     private String password;
 
-    public static void main(String[] args) {
-        System.out.println("Enter your login: ");
-        Scanner scanner = new Scanner(System.in);
-        User u = new User();
-        String log = scanner.nextLine();
-        System.out.println("Enter your password: ");
-        String pass = scanner.nextLine();
-        u.setLogin(log);
-        u.setPassword(pass);
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
+    public User() {
     }
 
     public String getLogin() {
@@ -31,5 +29,27 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return Objects.equals(getLogin(), user.getLogin()) &&
+                Objects.equals(getPassword(), user.getPassword());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getLogin(), getPassword());
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

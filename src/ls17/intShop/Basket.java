@@ -1,15 +1,13 @@
 package ls17.intShop;
 
-import java.util.Collection;
+
 import java.util.LinkedList;
+import java.util.Queue;
 
-public class Basket extends Product{
-    Collection choicedProducts = new LinkedList();
+public class Basket {
+    Queue choicedProducts = new LinkedList();
 
-    public void addToBasket(){
-    }
-
-    public Basket(String name, double price, double rating) {
-        super(name, price, rating);
+    public void addToBasket(Product product) {
+        choicedProducts.add(product);
     }
 }

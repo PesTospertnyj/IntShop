@@ -1,23 +1,20 @@
 package ls17.intShop;
 
+import java.util.Queue;
+
 public class Category {
     private String name;
-    Category home = new Category("Главная");
-    Category products = new Category("Товары");
-    Category aboutUs = new Category("О нас");
+    private Queue<Product> products;
 
-    public Category() {
-    }
-
-    public String getName() {
-        return name;
+    public Category(String name, Queue<Product> products) {
+        this.name = name;
+        this.products = products;
     }
 
     public Category(String name) {
         this.name = name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Category() {
     }
 }
